@@ -5,8 +5,11 @@ body {
   font-family: 'Lato', sans-serif;
   line-height: 2;
 }
+
 h1.product {
   margin-left: 2rem;
+  padding-top: 2rem;
+  margin-top: 0;
 }
 
 
@@ -84,9 +87,10 @@ nav a:hover {
   background: #ffffff url(https://assets.codepen.io/6306176/gulp-bean-bkgd.jpg) repeat-x bottom;
   padding-bottom: 300px;
 }
+
 .contact {
-max-width: 1200px;
-margin: 0 auto;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: .5rem;
   display: flex;
   align-items: flex-start;
@@ -94,9 +98,11 @@ margin: 0 auto;
   justify-content: space-between;
   gap: 30px;
 }
+
 .contact-text-button {
   align-self: center;
 }
+
 /* sits inside of the white background, centered */
 .main {
   max-width: 1200px;
@@ -174,9 +180,8 @@ footer a {
 
 /* MEDIA QUERIES  */
 /* Tablet */
-@media only screen and (max-width: 1024px)  {
-  body {
-  }
+@media only screen and (max-width: 1024px) {
+  body {}
 
   .main.product {
     flex-direction: column;
@@ -192,12 +197,11 @@ footer a {
     flex-grow: 0.6;
     flex: 1;
   }
-  
-/* change the order of image and the text only for the middle product */
-.main.product article:nth-child(2) div:first-child 
-{
+
+  /* change the order of image and the text only for the middle product */
+  .main.product article:nth-child(2) div:first-child {
     order: 2;
-}
+  }
 }
 
 /* Mobile */
@@ -230,12 +234,14 @@ footer a {
   figure {
     width: 90%;
   }
+
   article.product {
     max-width: 100%;
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
     gap: 2rem;
   }
+
   /* .main.product article:nth-child(1) 
   {
       order: 2;
