@@ -6,16 +6,32 @@ body {
   line-height: 2;
 }
 
-.contact {
+@mixin flex-column {
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+@mixin flex-arg ($direction) {
+  display: flex;
+flex-direction: $direction;
+  
+}
+
+$buttoncolor: #59331d;
+
+$lightgraycolor: #f2f2f2;
+
+$orangecolor: #d98555;
+
+
+.contact {
+  @include flex-column;
+}
+
 article.product {
   max-width: 100%;
-  display: flex;
-  flex-direction: column;
+  @include flex-arg(column);
   gap: 2rem;
 }
 
@@ -24,6 +40,7 @@ h1.product {
   padding-top: 2rem;
   margin-top: 0;
 }
+
 
 h1,
 h2,
@@ -38,6 +55,7 @@ h1 {
 
 p {
   font-size: 1.2rem;
+
 }
 
 /* make images flexible */
@@ -46,7 +64,7 @@ img {
 }
 
 a {
-  color: #59331d;
+  color: $buttoncolor;
 }
 
 a:hover {
@@ -54,7 +72,7 @@ a:hover {
 }
 
 header {
-  border-bottom: 10px solid #d98555;
+  border-bottom: 10px solid $orangecolor;
 }
 
 /* navbar styling */
@@ -64,9 +82,7 @@ nav ul {
   list-style-type: none;
   display: flex;
   flex-flow: row wrap;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flex-column;
 }
 
 nav li {
@@ -92,7 +108,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #d98555;
+  color: $orangecolor;
 }
 
 /* establishes a white background */
@@ -123,10 +139,9 @@ nav a:hover {
   padding: 2rem;
   display: flex;
   gap: 30px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flex-column;
 }
+
 
 figure {
   margin: 3rem 0 0 0;
@@ -137,33 +152,34 @@ figure {
 
 img {
   border-radius: 10px;
+
 }
 
 figcaption {
-  color: #f2f2f2;
+  color: $lightgraycolor;
   padding: 0.5rem;
 }
 
 .button {
   display: inline-block;
-  background-color: #59331d;
+  background-color: $buttoncolor;
   border-radius: 10px;
   padding: 0.5rem 1rem;
   margin: 0;
-  color: #f2f2f2;
+  color: $lightgraycolor;
   text-decoration: none;
-  border: 3px solid #59331d;
+  border: 3px solid $buttoncolor;
 }
 
 .button:hover {
-  background-color: #f2f2f2;
-  color: #59331d;
+  background-color: $lightgraycolor;
+  color: $buttoncolor;
 }
 
 footer {
-  color: #f2f2f2;
+  color: $lightgraycolor;
   text-align: center;
-  border-top: 10px solid #d98555;
+  border-top: 10px solid $orangecolor;
 }
 
 footer ul {
@@ -176,7 +192,7 @@ footer ul {
 }
 
 footer a {
-  color: #f2f2f2;
+  color: $lightgraycolor;
   font-size: 2rem;
   display: block;
   margin: 0 1rem 3rem 1rem;
@@ -188,22 +204,27 @@ footer a {
   .main.about article {
     flex: 1;
   }
+
   .main.product {
     flex-direction: column;
   }
+
   .main.about {
     flex-direction: row;
   }
+
   article.product {
     max-width: 100%;
     display: flex;
     gap: 2rem;
     flex-direction: row;
   }
+
   article.product div {
     flex-grow: 0.6;
     flex: 1;
   }
+
   /* change the order of image and the text only for the middle product */
   /* .main.product article:nth-child(2) div:first-child {
     order: 2;
@@ -216,39 +237,50 @@ footer a {
     /* background-color: blue; */
     display: flexbox;
   }
+
   .main {
+
     flex-direction: row;
     justify-content: space-between;
     flex-flow: row wrap;
     /* justify-content: center;
     align-items: center; */
+
   }
+
   .contact {
     flex-direction: row;
     justify-content: center;
     align-items: center;
   }
+
   article {
     flex-grow: 1;
     max-width: 50%;
     flex: 1;
     align-items: flex-start;
     justify-content: flex-start;
+
   }
+
   nav ul {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+
   }
+
   /* figure {
     width: 90%;
   } */
+
   /* article.product {
     max-width: 100%;
     display: flex;
     flex-direction: column;
     gap: 2rem;
   } */
+
   /* .main.product article:nth-child(1) 
   {
       order: 2;
@@ -257,9 +289,11 @@ footer a {
   .main.product article:nth-child(2) div:first-child {
     order: 2;
   }
+
   .main.product article:nth-child(2) h2 {
     margin-top: 0;
     padding-top: 0;
+
   }
 }
 
