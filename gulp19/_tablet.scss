@@ -1,0 +1,33 @@
+
+/* MEDIA QUERIES  */
+/* Tablet */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .main.about article {
+      flex: 1;
+    }
+  
+    .main.product {
+      flex-direction: column;
+    }
+  
+    .main.about {
+      flex-direction: row;
+    }
+  
+    article.product {
+      max-width: 100%;
+      gap: 2rem;
+      @include flex-arg(row);
+    }
+  
+    article.product div {
+      flex-grow: 0.6;
+      flex: 1;
+    }
+  
+    /* change the order of image and the text only for the middle product */
+    /* .main.product article:nth-child(2) div:first-child {
+      order: 2;
+    } */
+  }
+  

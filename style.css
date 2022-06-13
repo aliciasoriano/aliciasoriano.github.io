@@ -20,8 +20,8 @@ article.product {
 }
 
 h1.product {
-  margin-left: 2rem;
-  padding-top: 2rem;
+  margin-left: calc(1rem+1rem);
+  padding-top: calc(1rem+1rem);
   margin-top: 0;
 }
 
@@ -58,6 +58,10 @@ header {
 }
 
 /* navbar styling */
+nav {
+  /* max width on the image in pixels */
+}
+
 nav ul {
   padding: 0;
   margin: 0;
@@ -74,15 +78,14 @@ nav li {
   font-size: 1.3rem;
 }
 
-/* max width on the image in pixels */
-nav .logo img {
-  max-width: 150px;
-}
-
-/* flex basis on the image container, li */
 nav .logo {
+  /* flex basis on the image container, li */
   flex-basis: 100%;
   text-align: center;
+}
+
+nav .logo img {
+  max-width: 150px;
 }
 
 nav a {
@@ -182,6 +185,10 @@ footer a {
   margin: 0 1rem 3rem 1rem;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 /* MEDIA QUERIES  */
 /* Tablet */
 @media only screen and (min-width: 768px) and (max-width: 992px) {
@@ -196,8 +203,8 @@ footer a {
   }
   article.product {
     max-width: 100%;
-    display: flex;
     gap: 2rem;
+    display: flex;
     flex-direction: row;
   }
   article.product div {
@@ -206,22 +213,18 @@ footer a {
   }
   /* change the order of image and the text only for the middle product */
   /* .main.product article:nth-child(2) div:first-child {
-    order: 2;
-  } */
+      order: 2;
+    } */
 }
 
 /* Desktop */
 @media only screen and (min-width: 992px) {
-  body {
-    /* background-color: blue; */
-    display: flexbox;
-  }
   .main {
     flex-direction: row;
     justify-content: space-between;
     flex-flow: row wrap;
     /* justify-content: center;
-    align-items: center; */
+      align-items: center; */
   }
   .contact {
     flex-direction: row;
@@ -240,19 +243,6 @@ footer a {
     justify-content: center;
     align-items: center;
   }
-  /* figure {
-    width: 90%;
-  } */
-  /* article.product {
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  } */
-  /* .main.product article:nth-child(1) 
-  {
-      order: 2;
-  } */
   /* change the order of image and the text only for the middle product */
   .main.product article:nth-child(2) div:first-child {
     order: 2;
@@ -261,8 +251,4 @@ footer a {
     margin-top: 0;
     padding-top: 0;
   }
-}
-
-* {
-  box-sizing: border-box;
 }
