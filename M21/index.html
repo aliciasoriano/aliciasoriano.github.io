@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
     <!-- CSS only -->
     <!-- JavaScript Bundle with Popper -->
@@ -21,11 +24,18 @@
 
 
 
-<body class="bg-dark text-white container-lg">
+<body class="bg-light text-dark container-lg">
 
     <header>
-        <nav class="navbar navbar-expand-sm bg-light ps-4">
 
+        <div class="position-relative pe-5 m-50" style="height: 30px;">
+            <div class="position-absolute" style="right: 190px;">
+                <input placeholder="search" class="d-block position-absolute">
+                <i class="fa-solid fa-magnifying-glass d-block position-absolute text-muted" style="right:-180px; top: 8px;"></i>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-sm bg-light ps-4">
 
             <!-- <a class="navbar-brand" href="https://uxuicurriculum.wixsite.com">Gulp Coffee</a> -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
@@ -36,17 +46,18 @@
                 <div class="navbar-nav d-flex align-items-center flex-fill" style="height: 100px;">
                     <a class="nav-link  border border-1"> <img src="logo.png"></a>
 
-                    <a class="nav-link border border-1 flex-fill" href="https://uxuicurriculum.wixsite.com">Job
+                    <a class="nav-link border border-1 flex-fill h-100" style="line-height:80px"
+                        href="https://uxuicurriculum.wixsite.com">Job
                         Seekers</a>
-                    <a class="nav-link  border border-1 flex-fill"
+                    <a class="nav-link  border border-1 flex-fill h-100" style="line-height:80px"
                         href="https://uxuicurriculum.wixsite.com">Employers</a>
-                    <a class="nav-link  border border-1 flex-fill"
+                    <a class="nav-link  border border-1 flex-fill h-100" style="line-height:80px"
                         href="https://uxuicurriculum.wixsite.com">Unemployment</a>
-                    <a class="nav-link  border border-1 flex-fill" href="https://uxuicurriculum.wixsite.com">News</a>
-                    <a class="nav-link  border border-1 flex-fill"
+                    <a class="nav-link  border border-1 flex-fill h-100" style="line-height:80px"
+                        href="https://uxuicurriculum.wixsite.com">News</a>
+                    <a class="nav-link  border border-1 flex-fill d-block h-100" style="line-height:80px"
                         href="https://uxuicurriculum.wixsite.com">Resources</a>
                 </div>
-            </div>
             </div>
         </nav>
 
@@ -105,18 +116,35 @@
             <div><a><img src="woman 1.jpg" class="img-fluid d-block w-100"></a> </div>
             <div class="position-absolute top-0 start-0 w-50 p-5 ">
                 <h2>About Us</h2>
-                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore </h4>
+                <h7>
+                    Complete your weekly certification online at www.jobs.state.nm.us anytime or over the phone at
+                    1-877-664-6984 Monday-Friday, 7:00am-4:30pm.
+                </h7>
             </div>
         </div>
         <div>
             <h1>Top Stories</h1>
             <div class="position-relative d-flex">
 
-                <div class="flex-fill w-50"> <a><img src="man painting cropped.jpg"></a></div>
 
-                <div class="flex-fill w-50"> <a><img src="woman with glasses.jpg" class="w-100"></a></div>
+                <div class="flex-fill w-50 pe-3">
+                    <div> <a><img src="man painting cropped.jpg" class="w-100"> </a></div>
+                    <div>
+                        <p>Unemployment Insurance provides temporary financial assistance to qualified individuals who
+                            meet state eligibility requirements. Unemployment Insurance benefits are financed through
+                            employer payroll taxes; they are not deducted from employee paychecks.</p>
 
+                    </div>
+                </div>
+
+                <div class="flex-fill w-50 ps-3">
+                    <div> <a><img src="woman with glasses-CROPPED.jpg" class="w-100"></a></div>
+                    <div>
+                        <p>There are a variety of resources available to help you find work, from interactive online
+                            tools to friendly Employment Representatives at Workforce Connection Centers around the
+                            state.</p>
+                    </div>
+                </div>
                 <!-- <div class="flex-fill"> <a><img src="woman with glasses.jpg" class="img-fluid d-block w-100"></a> </div> -->
 
             </div>
@@ -124,15 +152,68 @@
 
     </div>
 
-    <footer class=" border-secondary border-top border-5 text-center py-5 mt-5 bg-primary text-white">
-        <div class="container-sm">
-            <p>&copy;2022 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.</p>
-            <p><small>This site is operated by Trilogy Education Services for educational purposes only.
-                    This is not a
-                    coffee products website. This is a fictitious company and scenario intended only for
-                    internal
-                    academic
-                    purposes.</small></p>
+    <footer class=" border-secondary border-top border-5 text-center py-5 mt-5 bg-light text-dark">
+        <div class="container-sm d-flex">
+            <div class="p-2">
+                <p>
+                <h6>Address</h6>
+                401 Broadway NE, Albuquerque, NM 87102
+                MAILING ADDRESS
+                PO Box 1928, Albuquerque, NM 87103</p>
+            </div>
+            <div class="p-2">
+                <p><small>
+                        <h6>Resource Links</h6>
+                        Office Locations
+                        Contact Us
+                        Equal Opportunity is the Law
+                        Inspection of Public Records Act
+                        Latest News
+                        External Links
+                        AmeriCorps
+                    </small></p>
+            </div>
+
+            <div class="p-2">
+                <p><small>
+                        <h6>Additional Resources</h6>
+                        Trade Adjustment Assistance
+                        Alternative Assistance
+                        About Us
+                        Local Workforce Development Boards
+                        Workforce Innovation and Opportunity Act
+                    </small></p>
+
+            </div>
+
+            <div class="p-2">
+                <p><small>
+                        <h6>FAQ's</h6>
+                        Apprenticeship
+                        Business
+                        Labor Relations
+                        Veterans
+                        Unemployment Insurance
+                        Appeals
+                        SIDES
+                    </small></p>
+
+            </div>
+
+            <div class="p-2">
+                <p><small>
+                        <h6>Additional Links</h6>
+                        Economic News
+                        Office of the Governor
+                        New Mexico.Gov
+                        SAVE Program
+                        PULLTOGETHER.ORG
+                        Energy Transition Act Committee
+
+                    </small></p>
+
+            </div>
+
         </div>
 
     </footer>
@@ -165,3 +246,5 @@
     </footer> -->
 
 </body>
+
+</html>
